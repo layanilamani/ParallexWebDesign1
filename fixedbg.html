@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+
     <style>
         body
         {
@@ -46,23 +49,48 @@
             padding: 20px;
             background-color: rgb(58, 58, 58);
         }
+
+        
         header
         {
-            background-color: rgba(255,255, 255, 0.5);
-            position: fixed;
-            width: 100%;
+            width: 100vw;
+            text-align: center;
             z-index: 50;
-            display: flex;
-
+            position: fixed;
         }
-        header nav ul{
-            display: flex;
+        .header-caption
+        {
+            color: white;
+        }
+        .logo
+        {
+            background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(246, 246, 246) 47%, rgb(237, 237, 237) 100%);
+            display: inline-block;
+            margin-top:50px;
+            padding-left: 50px;
+            padding-right:50px;
+            border-radius: 25px;
+            box-shadow: rgba(0, 0, 0, 0.53) 0px 10px 25px 1px;             
+        }
+        .logo ul{
+            display: inline-block;
             list-style: none;
         }
-        header nav ul li{
-            margin-left: 15px;
+        .logo ul li
+        {
+            display: inline;
+            margin-left: 50px;
+        }
+        .logo ul li a
+        {
+            text-decoration: none;
+            font-family: 'Squada One', cursive;
+            font-size: 18px;
+            color: rgba(58, 58, 58)
         }
         .logo img{
+            position: absolute;
+            margin-top: 10px;
             height: 35px;           
         }
     </style>
@@ -71,22 +99,23 @@
 
 
     <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="">
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="">Home</a>
-                </li>
-                <li><a href="">About Us</a></li>
-                <li><a href="">Contact</a></li>
-
-            </ul>
-        </nav>
+        <div class="header-caption">
+            <span class="logo">
+                <img src="images/logo.png" alt="">
+                <ul>
+                    <li>
+                        <a href="#face">Face</a>
+                    </li>
+                    <li><a href="#flower">Flower</a></li>
+                    <li><a href="#joy">Joy</a></li>
+    
+                </ul>
+            </span>
+             
+        </div> 
     </header>
 
-    <section class="section1 sec">
+    <section id="face" class="section1 sec">
         <div class="caption">
             <span class="text">
                 Face Off Face
@@ -95,7 +124,7 @@
     </section>    
 
 
-    <section class="section2 sec">
+    <section id="flower" class="section2 sec">
         <div class="caption">
             <span class="text">
                 Flower has Flower
@@ -104,7 +133,7 @@
     </section> 
 
     
-    <section class="section3 sec">
+    <section id="joy" class="section3 sec">
         <div class="caption">
             <span class="text">
                 The Joy
