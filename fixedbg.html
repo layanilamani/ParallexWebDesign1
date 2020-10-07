@@ -10,6 +10,7 @@
     <style>
         html {
             scroll-behavior: smooth;
+            overflow-x:hidden;
         }
         body
         {
@@ -17,11 +18,13 @@
             padding: 0;
             font-family: sans-serif;
         }
-        .section1
+        .section1  
         {
-            background: url(images/omid-armin-xOjzehJ49Hk-unsplash.jpg);           
-        }
-
+            background: url(images/omid-armin-xOjzehJ49Hk-unsplash.jpg); 
+            clip-path: polygon(0 15%, 100% 0%, 100% 85%, 0% 100%);        
+            
+        }         
+       
         .section3
         {
             background: url(images/gabriel-baranski-vGICUyYW2CE-unsplash.jpg);           
@@ -29,6 +32,7 @@
          .section2
         {
             background: url(images/isaac-mehegan-sVRSQNPJMq4-unsplash.jpg); 
+            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
         }
         .sec
         {
@@ -46,14 +50,28 @@
             position: relative;
             top: 50%;            
             letter-spacing: 20px;
+            
         }
-        .text
+        .caption
         {
             padding: 20px;
-            background-color: rgb(58, 58, 58);
+            transition: all 3s ease;  
+            /* background-color: rgb(58, 58, 58); */
+            text-shadow: 0 0 5px #FFF,
+                         0 0 10px #FFF, 
+                         0 0 15px #FFF, 
+                         0 0 20px #fff, 
+                         0 0 30px #fff, 
+                         0 0 40px #000,
+                         0 0 55px #000000, 
+                         0 0 75px #000000;  
         }
 
-        
+        .caption:hover {
+             
+             transform: scale(1.5);
+             opacity: 0;
+         }
         header
         {
             width: 100vw;
@@ -64,6 +82,7 @@
         .header-caption
         {
             color: white;
+            
         }
         .logo
         {
@@ -96,6 +115,8 @@
             margin-top: 10px;
             height: 35px;           
         }
+
+      
     </style>
 </head>
 <body>
